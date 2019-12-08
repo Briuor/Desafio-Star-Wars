@@ -15,7 +15,7 @@ const routes = [
   },
   // Rota de detalhes dos filmes
   {
-    path: "/film/:id",
+    path: "/films/:id",
     name: "filmItem",
     component: FilmItem
   },
