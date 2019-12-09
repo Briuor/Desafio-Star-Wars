@@ -1,11 +1,12 @@
 <template>
-  <router-link :to="/films/ + film.episode_id">
+  <router-link :to="/films/ + filmId">
     <b-card
+      @click="storeImage($event)"
       v-if="film"
       class="mb-5"
       border-variant="light"
       style="border: none; max-width: 340px; min-width: 350px"
-      :img-src="test_src"
+      :img-src="imagePath"
       img-alt="Image"
       no-body
     >
@@ -39,38 +40,44 @@ export default {
   props: ["film"],
   data() {
     return {
-      test_src: anewhope
+      imagePath: anewhope,
+      filmId: 0
     };
   },
   created() {
+    const filmUrlSplited = this.film.url.split("/");
+    this.filmId = filmUrlSplited[5];
     this.getFilmImage(this.film.episode_id);
-    window.console.log(this.test_src);
   },
   methods: {
     getFilmImage(episode_id) {
       switch (episode_id) {
         case 1:
-          this.test_src = phantommenace;
+          this.imagePath = phantommenace;
           break;
         case 2:
-          this.test_src = attackoftheclones;
+          this.imagePath = attackoftheclones;
           break;
         case 3:
-          this.test_src = revengeofthesith;
+          this.imagePath = revengeofthesith;
           break;
         case 4:
-          this.test_src = anewhope;
+          this.imagePath = anewhope;
           break;
         case 5:
-          this.test_src = theempirestricksback;
+          this.imagePath = theempirestricksback;
           break;
         case 6:
-          this.test_src = returnofthejedi;
+          this.imagePath = returnofthejedi;
           break;
         case 7:
-          this.test_src = theforceawakens;
+          this.imagePath = theforceawakens;
           break;
       }
+    },
+    storeImage(event) {
+      window.console.log(event.target.src);
+      localStorage.setItem("imagePath", event.target.src);
     }
   }
 };
