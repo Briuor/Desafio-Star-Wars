@@ -35,6 +35,9 @@ export default {
       films: []
     };
   },
+  // firestore: {
+  //   film: db.collection("films")
+  // },
   created() {
     axios.get("https://swapi.co/api/films").then(res => {
       this.films = res.data.results;
