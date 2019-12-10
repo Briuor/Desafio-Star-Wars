@@ -17,6 +17,7 @@ yarn
 ```sh
 # após instalar as dependências, digitar o comando abaixo para compilar e executar o projeto
 yarn serve
+# acessar http://localhost:8080
 ```
 
 ### Observação:
