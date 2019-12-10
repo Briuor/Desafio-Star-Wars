@@ -1,5 +1,5 @@
 # desafio-enercred
-![alt text](https://github.com/Briuor/Desafio-Star-Wars-Enercred/tree/master/screenshot/main_page.png)
+![Screenshot](screenshot/main_page.png)
 
 ## Instalar Dependências
 ```sh
