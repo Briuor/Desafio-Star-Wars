@@ -3,7 +3,7 @@
     <b-navbar toggleable="lg">
       <b-navbar-brand to="/">
         <img
-          src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG43.png"
+          src="../assets/imgs/logo/logo.webp"
           width="130px"
           class="d-inline-block align-top"
           alt="Logo"
@@ -27,10 +27,7 @@
 
 <script>
 export default {
-  name: "Navbar",
-  props: {
-    msg: String
-  }
+  name: "Navbar"
 };
 </script>
 

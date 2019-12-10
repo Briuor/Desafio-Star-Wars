@@ -6,7 +6,11 @@
           <h1 class="ml-4 mb-4 text-white">Filmes</h1>
         </b-col>
       </b-row>
-      <b-row>
+      <!-- Loading spinner -->
+      <LoadingSpinner v-if="loading" />
+
+      <!-- Cards dos filmes -->
+      <b-row v-else>
         <b-col
           class="d-flex justify-content-center"
           xl="4"
@@ -24,45 +28,26 @@
 
 <script>
 import FilmCard from "../components/FilmCard";
+import LoadingSpinner from "../components/LoadingSpinner";
 import axios from "axios";
 export default {
   name: "film",
   components: {
-    FilmCard
+    FilmCard,
+    LoadingSpinner
   },
   data() {
     return {
-      films: []
+      films: [],
+      loading: false
     };
   },
-  // firestore: {
-  //   film: db.collection("films")
-  // },
   created() {
+    this.loading = true;
     axios.get("https://swapi.co/api/films").then(res => {
       this.films = res.data.results;
+      this.loading = false;
     });
-  },
-  methods: {
-    getFilmImage(episode_id) {
-      const imageFolderPath = "../assets/imgs/films/";
-      switch (episode_id) {
-        case 1:
-          return imageFolderPath + "anewhope.jpg";
-        case 2:
-          return imageFolderPath + "anewhope.jpg";
-        case 3:
-          return imageFolderPath + "anewhope.jpg";
-        case 4:
-          return imageFolderPath + "anewhope.jpg";
-        case 5:
-          return imageFolderPath + "anewhope.jpg";
-        case 6:
-          return imageFolderPath + "anewhope.jpg";
-        case 7:
-          return imageFolderPath + "anewhope.jpg";
-      }
-    }
   }
 };
 </script>

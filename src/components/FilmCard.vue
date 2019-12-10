@@ -26,13 +26,14 @@
 </template>
 
 <script>
+// Importando imagem de cada filme
 import anewhope from "../assets/imgs/films/anewhope.jpg";
-import attackoftheclones from "../assets/imgs/films/attackoftheclones.jpeg";
-import phantommenace from "../assets/imgs/films/phantommenace.jpeg";
-import revengeofthesith from "../assets/imgs/films/revengeofthesith.jpeg";
+import attackoftheclones from "../assets/imgs/films/attackoftheclones.jpg";
+import phantommenace from "../assets/imgs/films/phantommenace.jpg";
+import revengeofthesith from "../assets/imgs/films/revengeofthesith.jpg";
 import returnofthejedi from "../assets/imgs/films/returnofthejedi.jpeg";
-import theempirestricksback from "../assets/imgs/films/theempirestricksback.jpeg";
-import theforceawakens from "../assets/imgs/films/theforceawakens.jpeg";
+import theempirestrikesback from "../assets/imgs/films/theempirestrikesback.jpg";
+import theforceawaken from "../assets/imgs/films/theforceawaken.jpg";
 
 export default {
   name: "filmCard",
@@ -50,6 +51,7 @@ export default {
     this.getFilmImage(this.film.episode_id);
   },
   methods: {
+    // atribui imagem de acordo com episode_id do filme
     getFilmImage(episode_id) {
       switch (episode_id) {
         case 1:
@@ -65,18 +67,19 @@ export default {
           this.imagePath = anewhope;
           break;
         case 5:
-          this.imagePath = theempirestricksback;
+          this.imagePath = theempirestrikesback;
           break;
         case 6:
           this.imagePath = returnofthejedi;
           break;
         case 7:
-          this.imagePath = theforceawakens;
+          this.imagePath = theforceawaken;
           break;
       }
     },
     storeImage(event) {
-      window.console.log(event.target.src);
+      // guarda path da imagem do card clicado no cache do navegador
+      // para ser renderizada no componente "FilmItem"
       localStorage.setItem("imagePath", event.target.src);
     }
   }
@@ -92,7 +95,7 @@ a:hover {
 .overlay-image {
   background: #000;
   opacity: 0.85;
-  margin-top: -43.5%;
+  margin-top: -43.3%;
   color: white;
 }
 </style>

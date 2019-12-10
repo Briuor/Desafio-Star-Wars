@@ -1,5 +1,11 @@
 <template>
-  <b-modal ref="my-modal" hide-footer title="StarShip">
+  <b-modal
+    ref="my-modal"
+    header-bg-variant="dark"
+    header-text-variant="white"
+    hide-footer
+    title="StarShip"
+  >
     <div class="d-block text-left" v-if="starShipSelected">
       <h3 class="text-center">{{ starShipSelected.name }}</h3>
       <p><b>Modelo: </b>{{ starShipSelected.model }}</p>
