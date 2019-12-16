@@ -1,13 +1,13 @@
-# desafio-enercred
+# desafio-star-wars
 ![Screenshot](screenshot/main_page.png)
 
 ## Instalar Dependências
 ```sh
 # clonar ou baixar projeto
-git clone https://github.com/Briuor/Desafio-Star-Wars-Enercred.git
+git clone https://github.com/Briuor/Desafio-Star-Wars.git
 
 # após clonar, ir para o diretório do projeto
-cd Desafio-Star-Wars-Enercred/
+cd Desafio-Star-Wars/
 
 # digitar o comando abaixo para instalar as dependências do projeto
 yarn
