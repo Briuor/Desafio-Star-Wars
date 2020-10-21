@@ -92,7 +92,7 @@ export default {
   created() {
     const filmId = this.$route.params.id;
     this.loading = true;
-    axios.get(`https://swapi.co/api/films/${filmId}`).then(res => {
+    axios.get(`https://swapi.dev/api/films/${filmId}`).then(res => {
       this.film = res.data;
       window.console.log(this.film);
       this.getCharacters();

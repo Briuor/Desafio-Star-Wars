@@ -44,7 +44,7 @@ export default {
   },
   created() {
     this.loading = true;
-    axios.get("https://swapi.co/api/films").then(res => {
+    axios.get("https://swapi.dev/api/films").then(res => {
       this.films = res.data.results;
       this.loading = false;
     });

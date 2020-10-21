@@ -53,7 +53,7 @@ export default {
   },
   created() {
     this.loading = true;
-    axios.get("https://swapi.co/api/people/?page=1").then(res => {
+    axios.get("https://swapi.dev/api/people/?page=1").then(res => {
       this.people = res.data.results;
       this.getPlanetForEachPerson();
       this.loading = false;
@@ -71,7 +71,7 @@ export default {
         return;
       }
       axios
-        .get(`https://swapi.co/api/people/?page=${this.currentPage}`)
+        .get(`https://swapi.dev/api/people/?page=${this.currentPage}`)
         .then(res => {
           this.people = res.data.results;
           this.getPlanetForEachPerson();
