@@ -2,16 +2,16 @@
   <b-container>
     <b-row>
       <b-col sm="12" md="6" lg="8" xl="9">
-        <h1 class="ml-3 mb-4 text-white">Personagens</h1>
+        <h1 class="ml-3 mb-4 text-white">Characters</h1>
       </b-col>
       <!-- Paginacao -->
       <b-col sm="12" md="6" lg="4" xl="3" class="pt-3 text-white">
         <b-button variant="warning" @click="changePage('left')"
-          >Anterior</b-button
+          >Previous</b-button
         >
-        <span class="d-inline-block pl-1 pr-1"> Página: {{ currentPage }}</span
+        <span class="d-inline-block pl-1 pr-1"> Page: {{ currentPage }}</span
         ><b-button variant="warning" @click="changePage('right')"
-          >Próxima</b-button
+          >Next</b-button
         >
       </b-col>
     </b-row>

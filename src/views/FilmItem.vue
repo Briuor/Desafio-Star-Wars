@@ -12,14 +12,14 @@
             <b-col md="6">
               <b-card-body class="text-center" :title="film.title">
                 <b-card-text class="text-left">
-                  <b>Episódio: </b>{{ film.episode_id }}<br />
-                  <b>Descrição: </b>{{ film.opening_crawl }}<br />
-                  <b>Data: </b>{{ film.release_date }}<br />
-                  <b>Diretor: </b>{{ film.director }}<br />
-                  <b>Produtor: </b>{{ film.producer }}<br />
+                  <b>Episode: </b>{{ film.episode_id }}<br />
+                  <b>Description: </b>{{ film.opening_crawl }}<br />
+                  <b>Release Date: </b>{{ film.release_date }}<br />
+                  <b>Director: </b>{{ film.director }}<br />
+                  <b>Producer: </b>{{ film.producer }}<br />
 
                   <div>
-                    <b>Personagens: </b>
+                    <b>Characters: </b>
                     <a
                       href="#"
                       v-for="(character, index) in characters"
@@ -31,7 +31,7 @@
                   </div>
                   <br />
                   <div>
-                    <b>Naves: </b>
+                    <b>Star Ships: </b>
                     <a
                       href="#"
                       v-for="(starShip, index) in starShips"
@@ -43,7 +43,7 @@
                   </div>
                   <br />
                   <div>
-                    <b>Veículos: </b>
+                    <b>Vehicles: </b>
                     <span v-for="(vehicle, index) in vehicles" :key="index">
                       {{ vehicle.name }},
                     </span>

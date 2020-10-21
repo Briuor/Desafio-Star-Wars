@@ -17,8 +17,8 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/">Filmes</b-nav-item>
-          <b-nav-item to="/people">Personagens</b-nav-item>
+          <b-nav-item to="/">Movies</b-nav-item>
+          <b-nav-item to="/people">Characters</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

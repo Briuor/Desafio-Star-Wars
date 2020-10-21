@@ -14,10 +14,10 @@
         <b-card-title>{{ film.title }}</b-card-title>
 
         <b-card-text>
-          <b>Número do episódio:</b> {{ film.episode_id }}
+          <b>Episode Number:</b> {{ film.episode_id }}
           <br />
-          <b>Diretor:</b> {{ film.director }} <br />
-          <b>Data de Lançamento:</b>
+          <b>Director:</b> {{ film.director }} <br />
+          <b>Release Date:</b>
           {{ film.release_date }}
         </b-card-text>
       </b-card-body>

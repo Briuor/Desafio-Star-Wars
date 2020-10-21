@@ -3,7 +3,7 @@
     <b-container>
       <b-row>
         <b-col>
-          <h1 class="ml-4 mb-4 text-white">Filmes</h1>
+          <h1 class="ml-4 mb-4 text-white">Movies</h1>
         </b-col>
       </b-row>
       <!-- Loading spinner -->
